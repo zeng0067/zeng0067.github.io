@@ -1,0 +1,271 @@
+/* 0. CSS reset */
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+
+    blockquote, q {
+        quotes: none;
+    }
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+/* 1. global styles */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {  
+        margin: 0;
+        background-color: #aad4cf;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.25;
+        color: #000;
+    }
+
+    /* headings */
+    h1 {
+        font-size: 2em;
+        font-weight: normal;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        font-weight: normal;
+        line-height: 1.2;
+        margin-top: 20px;
+        margin-bottom:12px;
+    }
+
+    /* paragraphs */
+    p {
+        font-size: 1rem;
+        line-height: 1.25;
+        margin-bottom: 12px;
+    }
+
+    /* facts */
+    .facts ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .facts li {
+        line-height: 1.1;
+    }
+
+/* 2. container */
+    .content-container {
+        background-color: #d4e9e7;
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1024px;
+    }
+
+    main{
+        padding: 10px;
+    }
+
+/* 3. header */
+    .site-header {
+        position: relative;
+    }
+
+    .site-header img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .site-header h1 {
+        position: absolute;
+        top: 68%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 2em;
+    }
+
+/* 4. navigation */
+    .nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    padding: 3px;
+    list-style: none;
+    }
+
+    .nav-links li:not(:last-child) {
+    border-right: 1px solid #777;
+    }
+
+    .nav-links a {
+    display: block;
+    padding: 5px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+    text-decoration: underline;
+    }
+
+/* 5. main content */
+    article h2 {
+        font-size: 1.75em;
+    }
+
+    .article-image {
+        float: left;
+        width: 25%;
+        margin: 0 20px 10px 0;
+    }
+
+    article {
+        display: flow-root;
+    }
+
+    /* contact form */
+    .contact h2 {
+    margin-top: 26px;
+    }
+
+    form {
+    border: 1px solid #333;
+    padding: 16px;
+    }
+
+    .form-field {
+    margin: 17px 0 20px;
+    }
+
+    .form-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 18px;
+    }
+
+    .form-field input,
+    .form-field textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #c9c9c9;
+    border-radius: 0;
+    background: white;
+    font: inherit;
+    font-size: 16px;
+    padding: 5px 8px;
+    }
+
+    .form-field input {
+    height: 30px;
+    }
+
+    .form-field textarea {
+    min-height: 100px;
+    border-color: #999;
+    resize: vertical;
+    }
+
+    /* fieldset */
+    .visit-choice legend {
+        margin-bottom: 16px;
+    }
+
+    .visit-choice label {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        margin-right: 4px;
+        cursor: pointer;
+    }
+
+    .visit-choice input[type="radio"] {
+        margin: 0;
+    }
+
+    /* send button */
+    form button {
+        background-color: transparent;
+        border: 1px solid #333;
+        padding: 8px 10px;
+        font-size: 11px;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+/* 6. footer */
+    footer {
+        text-align: right;
+        padding: 20px 30px 30px;
+        margin: 0;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 12px;
+    }
+
+/* 7. responsive layout */
+    @media (max-width: 600px) {
+
+        .content-container {
+            width: 95%;
+        }
+
+        .site-header h1 {
+            font-size: 1.25rem;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .nav-links a {
+            font-size: 0.75rem;
+            padding: 5px 2px;
+        }
+    }
